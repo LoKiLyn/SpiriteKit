@@ -7,9 +7,8 @@
 //
 
 import SpriteKit
-import GameplayKit
 
-class GameScene: SKScene {
+class GameOverScene: SKScene {
     
     // MARK: - Private class constants
     private let label = SKLabelNode()
@@ -34,7 +33,7 @@ class GameScene: SKScene {
         label.fontName = "Arial"
         label.fontColor = SKColor.white
         label.fontSize = 44.0
-        label.text = "GameScene"
+        label.text = "GameOverScene"
         label.position = kScreenCenter
         
         self.addChild(label)
@@ -56,9 +55,10 @@ class GameScene: SKScene {
     
     // MARK: - Load Scene
     private func loadScene() {
-        let scene = GameOverScene(size: kViewSize)
+        let scene = MenuScene(size: kViewSize)
         let transition = SKTransition.fade(with: SKColor.black, duration: 0.5)
         
         self.view?.presentScene(scene, transition: transition)
     }
 }
+
